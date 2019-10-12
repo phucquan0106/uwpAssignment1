@@ -1,1 +1,1 @@
-C:\OishiWorkspace\Upgrade\Apt\Sem3\uwp\Assignment1\ScrollViewerDemo1\ScrollViewerDemo1.csproj;x86
+C:\OishiWorkspace\Upgrade\Apt\Sem3\uwp\Assignment1\ScrollViewerDemo1\uwpAssignment1.csproj;x86

@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ScrollViewerDemo1.Constant;
 using ScrollViewerDemo1.Entity;
 using ScrollViewerDemo1.Services;
 
@@ -30,7 +31,7 @@ namespace ScrollViewerDemo1.Pages
     /// </summary>
     public sealed partial class Login : Page
     {
-        private string LOGIN_URL = "https://2-dot-backup-server-003.appspot.com/_api/v2/members/authentication";
+        //private string LOGIN_URL = "https://2-dot-backup-server-003.appspot.com/_api/v2/members/authentication";
 
 
         public Login()
@@ -45,6 +46,10 @@ namespace ScrollViewerDemo1.Pages
                 email = Email.Text,
                 password = Password.Password,
             };
+
+            MemberServiceImp memberServiceImp = new MemberServiceImp();
+            memberServiceImp.FormLogin(memberLogin, ApiUrl.URL_LOGIN);
+
             //var httpClient = new HttpClient();
             //HttpContent authenticateContent = new StringContent(JsonConvert.SerializeObject(member), Encoding.UTF8, "application/json");
             //Task<HttpResponseMessage> httpRequestMessage = httpClient.PostAsync(api, authenticateContent);
@@ -74,9 +79,6 @@ namespace ScrollViewerDemo1.Pages
 
             //Windows.Storage.FileIO.WriteTextAsync(sampleFile, jsonJObject["token"].ToString()).GetAwaiter().GetResult();
             //Debug.WriteLine(sampleFile.Path);
-
-            MemberServiceImp memberServiceImp = new MemberServiceImp();
-            memberServiceImp.FormLogin(memberLogin, LOGIN_URL);
         }
 
         private void ButtonBase_ResetOnClick(object sender, RoutedEventArgs e)

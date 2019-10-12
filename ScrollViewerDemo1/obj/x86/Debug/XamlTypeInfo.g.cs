@@ -13,17 +13,17 @@ namespace ScrollViewerDemo1
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.18362.1")]
-        private global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.18362.1")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        private global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
             get
             {
                 if (__appProvider == null)
                 {
-                    __appProvider = new global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlMetaDataProvider();
+                    __appProvider = new global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlMetaDataProvider();
                 }
                 return __appProvider;
             }
@@ -61,7 +61,7 @@ namespace ScrollViewerDemo1
     }
 }
 
-namespace ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo
+namespace ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo
 {
     /// <summary>
     /// Main class for providing metadata for the app or library
@@ -70,15 +70,15 @@ namespace ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+        private global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
 
-        private global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlTypeInfoProvider Provider
+        private global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlTypeInfoProvider Provider
         {
             get
             {
                 if (_provider == null)
                 {
-                    _provider = new global::ScrollViewerDemo1.ScrollViewerDemo1_XamlTypeInfo.XamlTypeInfoProvider();
+                    _provider = new global::ScrollViewerDemo1.uwpAssignment1_XamlTypeInfo.XamlTypeInfoProvider();
                 }
                 return _provider;
             }

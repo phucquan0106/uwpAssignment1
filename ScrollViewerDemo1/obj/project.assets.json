@@ -8259,9 +8259,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\OishiWorkspace\\Upgrade\\Apt\\Sem3\\uwp\\Assignment1\\ScrollViewerDemo1\\ScrollViewerDemo1.csproj",
-      "projectName": "ScrollViewerDemo1",
-      "projectPath": "C:\\OishiWorkspace\\Upgrade\\Apt\\Sem3\\uwp\\Assignment1\\ScrollViewerDemo1\\ScrollViewerDemo1.csproj",
+      "projectUniqueName": "C:\\OishiWorkspace\\Upgrade\\Apt\\Sem3\\uwp\\Assignment1\\ScrollViewerDemo1\\uwpAssignment1.csproj",
+      "projectName": "uwpAssignment1",
+      "projectPath": "C:\\OishiWorkspace\\Upgrade\\Apt\\Sem3\\uwp\\Assignment1\\ScrollViewerDemo1\\uwpAssignment1.csproj",
       "packagesPath": "C:\\Users\\oishi\\.nuget\\packages\\",
       "outputPath": "C:\\OishiWorkspace\\Upgrade\\Apt\\Sem3\\uwp\\Assignment1\\ScrollViewerDemo1\\obj\\",
       "projectStyle": "PackageReference",

@@ -18,38 +18,31 @@
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem Tag="formsong" Content="Form Song">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Tag="newestsong" Content="Newest Song">
+                <NavigationViewItem Tag="login" Content="Login">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="mysong" Content="My Song">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Tag="file" Icon="AddFriend" Content="File Handle"/>
                 <NavigationViewItem Tag="register" Content="Register">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="showinformation" Content="Show Information">
+                <NavigationViewItem Tag="allsong" Content="All Songs">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="mysong" Content="My Songs">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="editinformation" Content="Edit Information">
+                <NavigationViewItem Tag="uploadsong" Content="Upload Song">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <!--<NavigationViewItem Tag="music" Icon="Audio" Content="Music"/>-->
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>
@@ -57,12 +50,9 @@
                  more info about how to implement search. -->
                 <AutoSuggestBox x:ConnectionId='4' x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
-
-            <ScrollViewer>
-                <Frame x:ConnectionId='5' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+            <Frame x:ConnectionId='5' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
                                                                    />
-            </ScrollViewer>
-        </NavigationView>
+           </NavigationView>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>

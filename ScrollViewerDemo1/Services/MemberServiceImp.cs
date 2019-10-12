@@ -32,7 +32,7 @@ namespace ScrollViewerDemo1.Services
         public void FormRegister(Member user, string api)
         {
             var resMember = GetObjectResultFromHTTPPostRequest<Member>(user, api);
-            Debug.WriteLine(resMember.email);
+            Debug.WriteLine(resMember.id);
         }
 
         public T GetObjectResultFromHTTPPostRequest<T>(T test, string api)
@@ -68,15 +68,16 @@ namespace ScrollViewerDemo1.Services
             return sampleFile;
         }
 
-        public string ReadFromTXTFile()
-        {
-            Windows.Storage.StorageFolder storageFolder =
-                Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile =
-                storageFolder.GetFileAsync("sample.txt").GetAwaiter().GetResult();
+        //public string ReadFromTXTFile()
+        //{
+        //    Windows.Storage.StorageFolder storageFolder =
+        //        Windows.Storage.ApplicationData.Current.LocalFolder;
+        //    Windows.Storage.StorageFile sampleFile =
+        //        storageFolder.GetFileAsync("sample.txt").GetAwaiter().GetResult();
 
-            string text = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
-            return text;
-        }
+        //    string text = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
+            
+        //    return text;
+        //}
     }
 }

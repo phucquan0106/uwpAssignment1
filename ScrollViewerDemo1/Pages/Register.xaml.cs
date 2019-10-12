@@ -21,6 +21,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json.Linq;
+using ScrollViewerDemo1.Constant;
 using ScrollViewerDemo1.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -32,9 +33,6 @@ namespace ScrollViewerDemo1.Pages
     /// </summary>
     public sealed partial class Register : Page
     {
-        private const string ApiUrl = "https://2-dot-backup-server-003.appspot.com/_api/v2/members";
-        private const string apiForUploadURL = "https://2-dot-backup-server-003.appspot.com/get-upload-token";
-
         public Register()
         {
             this.InitializeComponent();
@@ -56,6 +54,10 @@ namespace ScrollViewerDemo1.Pages
                 phone = txtPhone.Text
 
             };
+
+            MemberServiceImp memberServiceImp = new MemberServiceImp();
+            memberServiceImp.FormRegister(member, ApiUrl.URL_REGISTER);
+
             ////Debug.WriteLine(JsonConvert.SerializeObject(member));
             //Debug.WriteLine(JsonConvert.SerializeObject(member));
             //var httpClient = new HttpClient();
@@ -70,30 +72,25 @@ namespace ScrollViewerDemo1.Pages
             //JObject resJObject = JObject.Parse(responseContent);
             //Debug.WriteLine(resMember.email);
             //Debug.WriteLine(resJObject["email"]);
-
-            MemberServiceImp memberServiceImp = new MemberServiceImp();
-            memberServiceImp.FormRegister(member, ApiUrl);
-
         }
 
-        private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            CameraCaptureUI captureUI = new CameraCaptureUI();
-            captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
-            captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
+        //private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        //{
+        //    CameraCaptureUI captureUI = new CameraCaptureUI();
+        //    captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+        //    captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
 
-            StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
+        //    StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
 
-            if (photo == null)
-            {
-                // User cancelled photo capture
-                return;
-            }
+        //    if (photo == null)
+        //    {
+        //        // User cancelled photo capture
+        //        return;
+        //    }
 
-            FileServiceImp fileServiceImp = new FileServiceImp();
-            string UploadURL = fileServiceImp.GetUploadURL(apiForUploadURL);
-
-            fileServiceImp.UploadFile(UploadURL, "myFile", "image/png", photo, Avatar, AvatarUrl);
-        }
+        //    FileServiceImp fileServiceImp = new FileServiceImp();
+        //    string UploadURL = fileServiceImp.GetUploadURL(apiForUploadURL);
+        //    fileServiceImp.UploadFile(UploadURL, "myFile", "image/png", photo, Avatar, AvatarUrl);
+        //}
     }
 }

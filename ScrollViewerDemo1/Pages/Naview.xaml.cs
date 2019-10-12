@@ -40,24 +40,26 @@ namespace ScrollViewerDemo1.Pages
         // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
-            ("home", typeof(Login)),
+            //("home", typeof(Login)),
             ("register", typeof(Register)),
             ("login", typeof(Login)),
-            ("showinformation", typeof(MyInfo)),
-            ("file", typeof(FileHandle)),
+            ("allsong", typeof(AllSong)),
+            ("mysong", typeof(MySong)),
+            ("uploadsong", typeof(UploadSong)),
+            
         };
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
             // You can also add items in code.
-            NavView.MenuItems.Add(new NavigationViewItemSeparator());
-            NavView.MenuItems.Add(new NavigationViewItem
-            {
-                Content = "My content",
-                Icon = new SymbolIcon((Symbol)0xF1AD),
-                Tag = "content"
-            });
-            _pages.Add(("content", typeof(Register)));
+            //NavView.MenuItems.Add(new NavigationViewItemSeparator());
+            //NavView.MenuItems.Add(new NavigationViewItem
+            //{
+            //    Content = "My content",
+            //    Icon = new SymbolIcon((Symbol)0xF1AD),
+            //    Tag = "content"
+            //});
+            //_pages.Add(("content", typeof(Register)));
 
             // Add handler for ContentFrame navigation.
             ContentFrame.Navigated += On_Navigated;
