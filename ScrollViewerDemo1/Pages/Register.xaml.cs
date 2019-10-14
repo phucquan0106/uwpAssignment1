@@ -33,9 +33,12 @@ namespace ScrollViewerDemo1.Pages
     /// </summary>
     public sealed partial class Register : Page
     {
+
+        private MemberServiceImp memberServiceImp;
         public Register()
         {
             this.InitializeComponent();
+            memberServiceImp = new MemberServiceImp();
         }
 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)
@@ -44,7 +47,7 @@ namespace ScrollViewerDemo1.Pages
             {
                 firstName = txtFirstName.Text,
                 lastName = txtLastName.Text,
-                password = txtPassword.Password.ToString(),
+                password = txtPassword.Password,
                 address = txtAddress.Text,
                 avatar = txtAvatar.Text,
                 birthday = txtBirthday.Text,
@@ -55,8 +58,113 @@ namespace ScrollViewerDemo1.Pages
 
             };
 
-            MemberServiceImp memberServiceImp = new MemberServiceImp();
-            memberServiceImp.FormRegister(member, ApiUrl.URL_REGISTER);
+            Dictionary<String, String> errors = member.Validate();
+            if (errors.Count == 0)
+            {
+                memberServiceImp.FormRegister(member, ApiUrl.URL_REGISTER);
+            }
+            else
+            {
+                if (errors.ContainsKey("firstName"))
+                {
+                    FirstNameMessage.Text = errors["firstName"];
+                    FirstNameMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    FirstNameMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("lastName"))
+                {
+                    LastNameMessage.Text = errors["lastName"];
+                    LastNameMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    LastNameMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("avatar"))
+                {
+                    AvatarMessage.Text = errors["avatar"];
+                    AvatarMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    AvatarMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("phone"))
+                {
+                    PhoneMessage.Text = errors["phone"];
+                    PhoneMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    PhoneMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("address"))
+                {
+                    AddressMessage.Text = errors["address"];
+                    AddressMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    AddressMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("introduction"))
+                {
+                    IntroductionMessage.Text = errors["introduction"];
+                    IntroductionMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    IntroductionMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("gender"))
+                {
+                    GenderMessage.Text = errors["gender"];
+                    GenderMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    GenderMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("birthday"))
+                {
+                    BirthdayMessage.Text = errors["birthday"];
+                    BirthdayMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    BirthdayMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("email"))
+                {
+                    EmailMessage.Text = errors["email"];
+                    EmailMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    EmailMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("password"))
+                {
+                    PasswordMessage.Text = errors["password"];
+                    PasswordMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    PasswordMessage.Visibility = Visibility.Collapsed;
+                }
+                if (txtPassword.Password != txtConfirmPassword.Password)
+                {
+                    ConfirmPasswordMessage.Text = "Not match!";
+                    ConfirmPasswordMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ConfirmPasswordMessage.Visibility = Visibility.Collapsed;
+                }
+            }
 
             ////Debug.WriteLine(JsonConvert.SerializeObject(member));
             //Debug.WriteLine(JsonConvert.SerializeObject(member));

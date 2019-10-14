@@ -32,5 +32,55 @@ namespace ScrollViewerDemo1.Entity
 
         public string token { get; set; }
 
+        public Dictionary<string, string> Validate()
+        {
+            var errors = new Dictionary<string, string>();
+            if (string.IsNullOrEmpty(firstName))
+            {
+                errors.Add("firstName", "firstName is required!");
+            }
+            if (string.IsNullOrEmpty(lastName))
+            {
+                errors.Add("lastName", "lastName is required!");
+            }
+            if (string.IsNullOrEmpty(avatar))
+            {
+                errors.Add("avatar", "avatar is required!");
+            }
+            if (string.IsNullOrEmpty(phone))
+            {
+                errors.Add("phone", "phone is required!");
+            }
+            else if (phone.Length < 10 || phone.Length > 12)
+            {
+                errors.Add("phone", "phone must be 10 to 11 characters!");
+            }
+            if (string.IsNullOrEmpty(address))
+            {
+                errors.Add("address", "address is required!");
+            }
+            if (string.IsNullOrEmpty(introduction))
+            {
+                errors.Add("introduction", "introduction is required!");
+            }
+            if (gender < 1 || gender > 2)
+            {
+                errors.Add("gender", "Male: 1 OR Female: 2!");
+            }
+            if (string.IsNullOrEmpty(birthday))
+            {
+                errors.Add("birthday", "birthday is required!");
+            }
+            if (string.IsNullOrEmpty(email))
+            {
+                errors.Add("email", "email is required!");
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                errors.Add("password", "password is required!");
+            }
+            return errors;
+        }
+
     }
 }

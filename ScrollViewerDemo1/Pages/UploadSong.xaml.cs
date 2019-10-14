@@ -58,10 +58,53 @@ namespace ScrollViewerDemo1.Pages
                 }
                 else
                 {
-                    //NameMessage.Text = errors["name"];
                     NameMessage.Visibility = Visibility.Collapsed;
                 }
-                // pop up error message
+                if (errors.ContainsKey("description"))
+                {
+                    DescriptionMessage.Text = errors["description"];
+                    DescriptionMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    DescriptionMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("singer"))
+                {
+                    SingerMessage.Text = errors["singer"];
+                    SingerMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    SingerMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("author"))
+                {
+                    AuthorMessage.Text = errors["author"];
+                    AuthorMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    AuthorMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("thumbnail"))
+                {
+                    ThumbnailMessage.Text = errors["thumbnail"];
+                    ThumbnailMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ThumbnailMessage.Visibility = Visibility.Collapsed;
+                }
+                if (errors.ContainsKey("link"))
+                {
+                    LinkMessage.Text = errors["link"];
+                    LinkMessage.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    LinkMessage.Visibility = Visibility.Collapsed;
+                }
             }
             //var song = new Song();
         }

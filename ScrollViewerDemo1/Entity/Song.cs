@@ -27,13 +27,25 @@ namespace ScrollViewerDemo1.Entity
             {
                 errors.Add("name", "Name is required!");
             }
-            else if (name.Length < 5 || name.Length > 30)
+            if (string.IsNullOrEmpty(description))
             {
-                errors.Add("name", "Name must be 5 to 30 characters!");
+                errors.Add("description", "description is required!");
             }
             if (string.IsNullOrEmpty(singer))
             {
                 errors.Add("single", "Single is required!");
+            }
+            if (string.IsNullOrEmpty(author))
+            {
+                errors.Add("author", "author is required!");
+            }
+            if (string.IsNullOrEmpty(link))
+            {
+                errors.Add("link", "link is required!");
+            }
+            if (string.IsNullOrEmpty(thumbnail))
+            {
+                errors.Add("thumbnail", "thumbnail is required!");
             }
             return errors;
         }

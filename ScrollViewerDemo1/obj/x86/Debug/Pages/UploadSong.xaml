@@ -15,15 +15,20 @@
             <TextBlock x:ConnectionId='3' x:Name="NameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Description</TextBlock>
             <TextBox x:ConnectionId='4' x:Name="Description"></TextBox>
+            <TextBlock x:ConnectionId='5' x:Name="DescriptionMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Singer</TextBlock>
-            <TextBox x:ConnectionId='5' x:Name="Singer"></TextBox>
+            <TextBox x:ConnectionId='6' x:Name="Singer"></TextBox>
+            <TextBlock x:ConnectionId='7' x:Name="SingerMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Author</TextBlock>
-            <TextBox x:ConnectionId='6' x:Name="Author"></TextBox>
+            <TextBox x:ConnectionId='8' x:Name="Author"></TextBox>
+            <TextBlock x:ConnectionId='9' x:Name="AuthorMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Thumbnail</TextBlock>
-            <TextBox x:ConnectionId='7' x:Name="Thumbnail"></TextBox>
+            <TextBox x:ConnectionId='10' x:Name="Thumbnail"></TextBox>
+            <TextBlock x:ConnectionId='11' x:Name="ThumbnailMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Link</TextBlock>
-            <TextBox x:ConnectionId='8' x:Name="Link"></TextBox>
-            <Button x:ConnectionId='9' Content="Post Free Song" Margin="74,63,0,0" VerticalAlignment="Top"                           />
+            <TextBox x:ConnectionId='12' x:Name="Link"></TextBox>
+            <TextBlock x:ConnectionId='13' x:Name="LinkMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <Button x:ConnectionId='14' Content="Post Song" Margin="74,63,0,0" VerticalAlignment="Top"                           />
         </StackPanel>
     </Grid>
 </Page>

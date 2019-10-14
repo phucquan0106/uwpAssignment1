@@ -81,10 +81,10 @@ namespace ScrollViewerDemo1.Pages
             //Debug.WriteLine(sampleFile.Path);
         }
 
-        private void ButtonBase_ResetOnClick(object sender, RoutedEventArgs e)
-        {
-            this.Email.Text = String.Empty;
-            this.Password.Password = String.Empty;
-        }
+        //private void ButtonBase_ResetOnClick(object sender, RoutedEventArgs e)
+        //{
+        //    this.Email.Text = String.Empty;
+        //    this.Password.Password = String.Empty;
+        //}
     }
 }

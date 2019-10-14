@@ -15,15 +15,20 @@
             <TextBlock x:Name="NameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Description</TextBlock>
             <TextBox x:Name="Description"></TextBox>
+            <TextBlock x:Name="DescriptionMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Singer</TextBlock>
             <TextBox x:Name="Singer"></TextBox>
+            <TextBlock x:Name="SingerMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Author</TextBlock>
             <TextBox x:Name="Author"></TextBox>
+            <TextBlock x:Name="AuthorMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Thumbnail</TextBlock>
             <TextBox x:Name="Thumbnail"></TextBox>
+            <TextBlock x:Name="ThumbnailMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
             <TextBlock>Link</TextBlock>
             <TextBox x:Name="Link"></TextBox>
-            <Button Content="Post Free Song" Margin="74,63,0,0" VerticalAlignment="Top" Click="ButtonBase_OnClick"/>
+            <TextBlock x:Name="LinkMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <Button Content="Post Song" Margin="74,63,0,0" VerticalAlignment="Top" Click="ButtonBase_OnClick"/>
         </StackPanel>
     </Grid>
 </Page>
